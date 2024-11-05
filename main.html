@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Bookery - Home</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body class="index-page">
+    <!-- Navigation Bar -->
+    <nav aria-label="Main Navigation">
+        <div class="nav-container">
+            <div class="logo-container">
+                <!-- Logo Image -->
+                <img src="BO_LD-removebg-preview.png" alt="Bookery Logo" class="logo-img">
+                <!-- Logo Title -->
+                <div class="logo">The Bookery</div>
+            </div>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-icon" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" role="button">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-button active">Home</a></li>
+                <li><a href="collection.html" class="nav-button">Books</a></li>
+                <li><a href="contact.html" class="nav-button">Store</a></li>
+                <li><a href="about.html" class="nav-button">About Us</a></li>
+            </ul>
+            <!-- Search Bar -->
+            <form class="search-bar" action="search.html" method="get" role="search" aria-label="Search books">
+                <input type="text" name="query" placeholder="Search books..." required aria-label="Search books">
+                <button type="submit" aria-label="Submit search">🔍</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <!-- Overlay Images Container -->
+        <div class="overlay-images">
+            <img src="Media/decorative1.png" alt="" class="overlay-img">
+            <img src="Media/decorative2.png" alt="" class="overlay-img">
+            <!-- Add more decorative images as needed -->
+        </div>
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Welcome to The Bookery</h1>
+            <p>Your one-stop shop for all your reading needs.</p>
+            <a href="collection.html" class="btn">Browse Books</a>
+        </div>
+    </header>
+
+    <!-- Featured Books -->
+    <section class="featured-books">
+        <h2>Featured Books</h2>
+        <div class="book-grid">
+            <!-- Book Item 1 -->
+            <div class="book-item">
+                <a href="collection.html">
+                    <img src="IMG_8161-removebg-preview.png" alt="I am Gita">
+                    <h3>I am Gita</h3>
+                    <p>Deep Trivedi</p>
+                </a>
+            </div>
+            <!-- Book Item 2 -->
+            <div class="book-item">
+                <a href="book2.html">
+                    <img src="IMG_8160-removebg-preview.png" alt="The Almanack of Ravikant">
+                    <h3>The Almanack of Ravikant</h3>
+                    <p>Naval Ravikant</p>
+                </a>
+            </div>
+            <!-- Book Item 3 -->
+            <div class="book-item">
+                <a href="book3.html">
+                    <img src="Naval+Ravikant-removebg-preview.png" alt="Zero to One">
+                    <h3>Zero to One</h3>
+                    <p>Peter Thiel</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspirational Quote Section -->
+    <section class="inspirational-quote">
+        <div class="quote-container">
+            <img src="Naval+Ravikant-removebg-preview.png" alt="Inspirational Quote" class="quote-img">
+            <div class="quote-text">
+                <p><em>"A room without books is like a body without a soul."</em></p>
+                <p class="author">- Marcus Tullius Cicero</p>
+                <a href="collection.html" class="btn">View Our Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <img src="Media/mohamad-khosravi-JoGyIyCSRKg-unsplash.jpg" alt="Sarah K.">
+                <p>"I found all the books I was looking for! The service is excellent."</p>
+                <p class="customer-name">- Sarah K.</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <img src="Media/tri-vo-xBaxS9f_AZ8-unsplash.jpg" alt="John D.">
+                <p>"A great selection and wonderful customer support. Highly recommend!"</p>
+                <p class="customer-name">- John D.</p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <img src="Media/vitaly-gariev-2KPTdfwyxJ8-unsplash.jpg" alt="Emily R.">
+                <p>"My favorite bookstore for all my reading needs. Keep up the good work!"</p>
+                <p class="customer-name">- Emily R.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Join Our Newsletter</h2>
+        <p>Stay updated with the latest books and exclusive offers.</p>
+        <form action="#" method="post" class="newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <button class="accessibility-btn">Accessibility</button>
+            </div>
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=toronto&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </div>
+        <p>&copy; 2024 The Bookery. All rights reserved.</p>
+    </footer>
+
+    <!-- Include JavaScript -->
+    <script>
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navLinks = document.querySelector('.nav-links');
+            const isExpanded = menuIcon.getAttribute('aria-expanded') === 'true';
+            menuIcon.setAttribute('aria-expanded', !isExpanded);
+            menuIcon.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
